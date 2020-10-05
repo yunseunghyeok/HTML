@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>11주차 실습과제</title>
+<style>
+body {margin:50 0 0 100;
+	background-color:black;}
+	
+#layer1 {background-color:green;
+	width:600;height:300;
+	position:absolute;left:50;top:100;
+	z-index:1;}
+	
+#layer2 {background-color:yellow;
+	width:600;height:300;
+	position:relative;left:100;top:140;
+	z-index:2;visibility:hidden;}
+	
+#layer3 {background-color:aqua;
+	width:600;height:300;
+	position:absolute;left:250;top:270;
+	z-index:3;visibility:hidden;}
+	
+#layer4 {background-color:yellowgreen;
+	width:250;height:220;
+	z-index:4;float:left;
+	margin:0 0 0 20;}
+	
+#layer5 {background-color:yellowgreen;
+	width:250;height:220;
+	z-index:4;float:right;
+	margin:0 20 0 0;}
+	
+h1 {color:yellow;font-align:center;}
+	
+h2 {color:black;font-align:center;}
+	
+h3 {color:blue;font-align:center;}
+	
+p {color:blue;font-align:center;}
+</style></head>
+<body>
+<div id=layer1
+	OnMouseDown="layer2.style.visibility='visible'"
+	OnMouseOver="layer2.style.visibility='hidden'">
+	<center>
+	<h1>전산기초실습 실습과제</h1>
+	<h3>이 레이어를 클릭하면 다음 레이어가 나타납니다.</h3></center></div>
+<div id=layer2
+	OnMouseDown="layer3.style.visibility='visible'">
+	<center>
+	<h2>학번:20203176 이름:윤승혁</h2><br>
+	<h3>이 레이어를 클릭하면 다음 레이어가 나타납니다.<br><br>
+	초록 레이어에 마우스 포인터를 올리면 이 레이어가 사라집니다.</h3></center></div>
+<div id=layer3
+	OnMouseDown="layer3.style.visibility='hidden'">
+	<center>
+	<h3>이 레이어를 숨기고 싶다면 이 레이어를 클릭하세요!</h3></center>
+	<div id=layer4>
+		<center>
+		<p>왼쪽 레이어입니다.<br><br>
+		float 속성을 사용하여 왼쪽에<br>
+		배치하세요.</p></center></div>
+	<div id=layer5>
+		<center>
+		<p>오른쪽 레이어입니다.<br><br>
+		float 속성을 사용하여 오른쪽<br>
+		에 배치하세요.</p></center></div>
+</div>
+</body>
+</html>
