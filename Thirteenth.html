@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>14주차 실습과제</title>
+<script>
+	function getsum(y){
+		var now=2021;
+		now=now-y;
+		return now;}
+</script>
+<style>
+	body {margin:0;}
+	
+	header {height:20%;padding:10;
+		background-color:pink;}
+	
+	nav {width:30%;height:60%;padding:10;
+		background-color:orange;float:left;}
+	
+	section {width:90%;height:60%;padding:10;
+		background-color:gray;}
+	
+	aside {width:10%;height:63%;
+		background:url(피자.png) repeat-x;float:right;
+		margin:0;}
+	
+	footer {height:10%;padding:10;
+		background-color:yellowgreen;clear:both;}
+	
+	h1 {color:blue;font-align:center;}
+	
+	h2 {color:green;font-align:center;}
+	
+	h3 {color:aqua;font-align:center;}
+	
+	.border {border:solid red 10px;box-shadow:5 5 20 green;padding:10;
+		width:300;height:50;align:center;}
+
+#layer1 {background-color:orange;
+	width:300;height:100;
+	z-index:1;margin:0 50 0 0;}
+
+#layer2 {background-color:orange;
+	width:300;height:100;
+	z-index:1;margin:0 50 0 0;}
+
+#layer3 {background-color:yellow;
+	width:500;height:100;position:absolute;left:400;top:200;
+	z-index:1;visibility:hidden;margin:0 0 0 100;}
+
+#layer4 {padding:20;background-color:aqua;
+	width:600;height:220;position:absolute;left:430;top:200;
+	z-index:2;visibility:hidden;font-size:7pt;}
+	
+	fieldset {border:navy 2 solid;width:300;}
+</style></head>
+<body><center>
+	<header><h1>전산기초실습 실습과제</h1></header></center>
+	<nav>
+	<center>
+	<div id=layer1
+		OnMouseDown="layer3.style.visibility='visible'">
+		<h2 class="border">당신의 나이는?</h2></div><p>
+	<div id=layer2
+		OnMouseDown="layer4.style.visibility='visible'">
+		<h2 class="border">피자 주문하기</h2></div>
+	</center></nav>
+	<aside></aside>
+	<section><center>
+	<div id=layer3><h2>
+	<script>
+		x=prompt("태어난 년도를 입력하여 주세요!", "2001");
+		document.write("당신의 나이는"+getsum(x)+"세 입니다.");
+	</script></div></center>
+	<div id=layer4>
+	<img src="피자.png"
+	width=200
+	height=220
+	align=right>
+	<hr>
+	주문자:<input type=text name=nickname size=30><br>
+	연락처:<input type=text name=phonenumber size=30><p>
+	<form>
+	<fieldset>
+	<legend align=left>피자 크기</legend>
+	<input type=radio name=size value=small>Small
+	<input type=radio name=size value=medium>Medium
+	<input type=radio name=size value=large>Large
+	<input type=radio name=size value=family>Family
+	</fieldset><br><br>
+	<fieldset>
+	<legend align=left>피자 토핑</legend>
+	<input type=checkbox name=topping value=bulgogi>불고기
+	<input type=checkbox name=topping value=shrimp>새우
+	<input type=checkbox name=topping value=mushroom>버섯
+	<input type=checkbox name=topping value=onion>양파
+	<input type=checkbox name=topping value=cheese>치즈
+	</fieldset><br><br>
+	배달 시간:<select name=time1>
+			<option value=morning>오전
+			<option value=afternoon>오후</select>
+		<select name=time2>
+			<option value=six>6시
+			<option value=seven>7시
+			<option value=eight>8시
+			<option value=nine>9시</select>
+		<select name=time3>
+			<option value=ten>10분
+			<option value=twenty>20분
+			<option value=thirty>30분
+			<option value=fourty>40분
+			<option value=fifty>50분</select>
+	<input type=submit value=주문하기>
+	<hr></image>
+	</form></div>
+	</section>
+	<footer><center>
+	<h3>학번:20203176&nbsp;&nbsp;&nbsp;이름:윤승혁</h3></center></footer>
+</body>
+</html>
